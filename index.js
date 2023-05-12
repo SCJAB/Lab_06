@@ -1,4 +1,5 @@
-var UI_Number = document.getElementById("UI_number");
+var UI_Number1 = document.getElementById("UI_Number");
+var UI_Number2 = document.getElementById("UI_Number_Result");
 var result = document.getElementById("result");
 
 function sum()
@@ -24,10 +25,28 @@ function clear()
 
 function getResult(operator)
 {
-  var UI_NumberValue = parseFloat(UI_Number.value);
+  var UI_NumberValue1 = parseFloat(UI_Number1.value);
+  var UI_NumberValue2 = parseFloat(UI_Number2.value);
 
   if (operator === "+")
   {
-    return UI_NumberValue + UI_NumberValue
+    return UI_NumberValue1 + UI_NumberValue2;
+  }
+  else if (operator === "-")
+  {
+    return UI_NumberValue1 - UI_NumberValue2;
+  }
+  else if (operator === "*")
+  {
+    return UI_NumberValue1 * UI_NumberValue2;
+  }
+  else if (operator === "/")
+  {
+    return UI_NumberValue1 / UI_NumberValue2;
+  }
+  else if (operator === "C")
+  {
+    document.getElementById("UI_Number").value = "";
+	  document.getElementById("UI_Number_Result").value = "";
   }
 }
