@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form>
-        <div>
-            <input type="UI_Num" id="UI_Number" placeholder="0" onkeyup="updateInput(this.value)">
-        </div>
-        <div>
-            <button type="button" onclick="sum()">+</button>
-            <button type="button" onclick="difference()">-</button>
-            <button type="button" onclick="product()">*</button>
-            <button type="button" onclick="quotient()">/</button>
-            <button type="button" onclick="clear()">C</button>
-        </div>
-        <div>
-            <h4>
-                Result: <span id="result">0</span>
-            </h4>
-        </div>
-    </form>
+		<input type="text" id="UI_Number" placeholder="0">
+		<div>
+			<button type="button" onclick="sum('+')">+</button>
+			<button type="button" onclick="difference('-')">-</button>
+			<button type="button" onclick="product('*')">*</button>
+			<button type="button" onclick="quotient('/')">/</button>
+			<button type="button" onclick="clearCalculation()">C</button>
+			<button type="button" onclick="calculateall()">=</button>
+		</div>
+	</form>
+	<h2>Result: <span id="result">0</span></h2>
     <script src="index.js"></script>
 </body>
 </html>
